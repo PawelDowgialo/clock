@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const Clock = ({ timezone }) => {
+const Clock = ({ zone }) => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
@@ -16,14 +16,14 @@ const Clock = ({ timezone }) => {
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
-    timeZone: timezone,
+    timeZone: zone,
   });
 
   const calendar = date.toLocaleDateString('pl-PL', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-    timeZone: timezone,
+    timeZone: zone,
   });
 
   return (
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#333'
     },
     time: {
-      fontSize: 70,
+      fontSize: 60,
       fontWeight: 'bold',
       textAlign: 'center',
       textShadowColor: '#ddd',

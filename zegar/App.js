@@ -10,11 +10,27 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator>
-        <Drawer.Screen name="New York" component={() => <Clock timezone="America/New_York"/>} />
-        <Drawer.Screen name="Moscow" component={() => <Clock timezone="Europe/Moscow"/>} />
-        <Drawer.Screen name="Tokyo" component={() => <Clock timezone="Asia/Tokyo"/>}/>
-        <Drawer.Screen name="Sydney" component={() => <Clock timezone="Australia/Sydney"/>} />
-        <Drawer.Screen name="Nairobi" component={() => <Clock timezone="Africa/Nairobi"/>} />
+
+        <Drawer.Screen name="Warsaw">
+          {() => <Clock zone="Europe/Warsaw" />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="New York">
+          {() => <Clock zone="America/New_York" />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Tokyo">
+          {() => <Clock zone="Asia/Tokyo" />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Sydney">
+          {() => <Clock zone="Australia/Sydney" />}
+        </Drawer.Screen>
+
+        <Drawer.Screen name="Nairobi">
+          {() => <Clock zone="Africa/Nairobi" />}
+        </Drawer.Screen>
+        
       </Drawer.Navigator>
     </NavigationContainer>
   );
